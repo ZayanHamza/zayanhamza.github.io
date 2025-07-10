@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Zayan Hamza - Cybersecurity Student, Photographer & Tech Enthusiast" />
+  <title>Zayan Hamza</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #1e1e1e;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #444;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/PkpMKAl.jpeg" alt="Zayan Hamza">
+    <h1>Zayan Hamza</h1>
+    <p>Cybersecurity Student | Photographer | Tech Enthusiast</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I’m a cybersecurity student at Macomb Community College with a passion for ethical hacking, digital security, and IT support. 
+      I'm currently working at Walmart in electronics, where I combine customer service skills with technical knowledge. 
+      I’m also a photographer and enjoy capturing moments through creative visuals.
+      I aim to become a cybersecurity consultant and a strong leader in the tech space.
+    </p>
+
+    <h2>What I Do</h2>
+    <ul>
+      <li>Cybersecurity – Network analysis, threat detection, ethical hacking</li>
+      <li>Customer-focused tech support</li>
+      <li>Photography – Portraits, events, and creative shots</li>
+      <li>Leadership and teamwork</li>
+    </ul>
+
+    <h2>Connect With Me</h2>
+    <ul>
+      <li><a href="mailto:zayanhamzaz@outlook.com">Email Me</a></li>
+      <li><a href="https://www.instagram.com/zice_03?igsh=M3Z3aWZlenJkaG1t&utm_source=qr" target="_blank">Instagram (@zice_03)</a></li>
+      <li><a href="https://www.snapchat.com/add/zahamzaaa?share_id=6wXqquduTz69PG-8BRVWqA&locale=en_US" target="_blank">Snapchat (@zahamzaaa)</a></li>
+      <li><a href="https://www.tiktok.com/@nobody_15030?_t=ZT-8xvJMhBRPg6&_r=1" target="_blank">TikTok (@nobody_15030)</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Zayan Hamza
+  </footer>
+
+</body>
+</html>
