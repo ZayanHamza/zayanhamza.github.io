@@ -41,21 +41,29 @@
       user-select: none;
       perspective: 600px;
       width: max-content;
+      color: #f9d342;
+      text-shadow: 2px 2px 8px #000;
     }
 
-    .half-name {
+    .top-half, .bottom-half {
       position: absolute;
       left: 0;
       width: 100%;
-      color: #f9d342;
-      text-shadow: 2px 2px 8px #000;
-      overflow: hidden;
       white-space: nowrap;
+      overflow: hidden;
+      /* clip paths for top and bottom halves */
+    }
+
+    .top-half {
+      top: 0;
       clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
       transform-origin: bottom left;
       animation: sliceTop 3s ease forwards;
+      color: #f9d342;
     }
-    .half-name.bottom {
+
+    .bottom-half {
+      top: 0;
       clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
       transform-origin: top right;
       animation: sliceBottom 3s ease forwards;
@@ -67,11 +75,8 @@
       0% {
         transform: translate(0, 0) rotateX(0deg);
       }
-      50% {
-        transform: translate(-10px, -20px) rotateX(-30deg);
-      }
       100% {
-        transform: translate(-15px, -30px) rotateX(-45deg);
+        transform: translate(-10px, -20px) rotateX(-30deg);
       }
     }
 
@@ -79,11 +84,8 @@
       0% {
         transform: translate(0, 0) rotateX(0deg);
       }
-      50% {
-        transform: translate(10px, 20px) rotateX(30deg);
-      }
       100% {
-        transform: translate(15px, 30px) rotateX(45deg);
+        transform: translate(10px, 20px) rotateX(30deg);
       }
     }
 
@@ -115,7 +117,7 @@
 
     p.subtitle {
       font-size: 1.2em;
-      margin-top: 140px;
+      margin-top: 80px;
       color: #ddd;
       font-weight: 600;
       text-shadow: 1px 1px 4px #000;
@@ -165,8 +167,8 @@
   <header>
     <img src="https://i.imgur.com/PkpMKAl.jpeg" alt="Zayan Hamza" />
     <div class="name-container" aria-label="Zayan Hamza">
-      <div class="half-name top">Zayan Hamza</div>
-      <div class="half-name bottom">Zayan Hamza</div>
+      <div class="top-half">Zayan Hamza</div>
+      <div class="bottom-half">Zayan Hamza</div>
       <div class="slash-line"></div>
     </div>
     <p class="subtitle">Cybersecurity Student | Photographer</p>
