@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Zayan Hamza - Cybersecurity Student, Photographer & One Piece Fan" />
-  <title>Zayan Hamza - One Piece Style</title>
+  <meta name="description" content="Zayan Hamza - Cybersecurity Student & Photographer" />
+  <title>Zayan Hamza</title>
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
   <style>
-    /* Reset and base */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -17,84 +16,12 @@
     }
 
     header {
-      background: url('https://i.imgur.com/UGK1qTj.jpeg') no-repeat center center/cover;
+      background: url('https://i.imgur.com/Ik9zUlc.jpeg') no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 60px 20px;
       position: relative;
       overflow: visible;
-    }
-
-    /* Waving animation on header text */
-    @keyframes wave {
-      0%, 60%, 100% { transform: rotate(0deg); }
-      30% { transform: rotate(15deg); }
-      45% { transform: rotate(-10deg); }
-    }
-
-    /* Sword slash effect on the letter Z */
-    .slash-z {
-      position: relative;
-      display: inline-block;
-      color: #f9d342;
-      font-family: 'Pirata One', cursive;
-      animation: swordSlash 3s infinite ease-in-out;
-      cursor: default;
-    }
-
-    .slash-z::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -10%;
-      width: 120%;
-      height: 100%;
-      background: linear-gradient(
-        45deg,
-        transparent 30%,
-        rgba(249, 211, 66, 0.8) 50%,
-        transparent 70%
-      );
-      transform: skewX(-20deg);
-      animation: slashMove 3s infinite ease-in-out;
-      pointer-events: none;
-      border-radius: 2px;
-    }
-
-    @keyframes swordSlash {
-      0%, 20%, 100% {
-        color: #f9d342;
-        text-shadow: none;
-      }
-      40%, 60% {
-        color: #fff;
-        text-shadow: 0 0 10px #f9d342, 0 0 30px #f9d342;
-      }
-    }
-
-    @keyframes slashMove {
-      0%, 100% {
-        left: -10%;
-      }
-      50% {
-        left: 110%;
-      }
-    }
-
-    header h1 {
-      font-family: 'Pirata One', cursive;
-      font-size: 3.5em;
-      margin: 0;
-      display: inline-block;
-      animation: wave 2.5s infinite;
-      user-select: none;
-      text-shadow: 2px 2px 8px #000;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      text-shadow: 1px 1px 4px #000;
     }
 
     header img {
@@ -108,7 +35,46 @@
       z-index: 1;
     }
 
-    /* Animated Straw Hat icon bouncing */
+    header h1 {
+      font-family: 'Pirata One', cursive;
+      font-size: 3.5em;
+      margin: 20px 0;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    /* Diagonal sword slash effect */
+    header h1::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        135deg,
+        transparent 45%,
+        rgba(255,255,255,0.8) 50%,
+        transparent 55%
+      );
+      transform: rotate(0deg);
+      animation: slashEffect 3s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes slashEffect {
+      0%   { transform: translate(-100%, -100%) rotate(45deg); opacity: 0; }
+      50%  { transform: translate(0%, 0%) rotate(45deg); opacity: 1; }
+      100% { transform: translate(100%, 100%) rotate(45deg); opacity: 0; }
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
     .straw-hat {
       position: absolute;
       top: 20px;
@@ -119,7 +85,6 @@
       animation: bounce 3s ease-in-out infinite;
       user-select: none;
       z-index: 10;
-      cursor: default;
     }
 
     @keyframes bounce {
@@ -135,15 +100,9 @@
       animation: fadeIn 1.2s forwards;
     }
 
-    section:nth-of-type(1) {
-      animation-delay: 0.3s;
-    }
-    section:nth-of-type(2) {
-      animation-delay: 0.8s;
-    }
-    section:nth-of-type(3) {
-      animation-delay: 1.3s;
-    }
+    section:nth-of-type(1) { animation-delay: 0.3s; }
+    section:nth-of-type(2) { animation-delay: 0.8s; }
+    section:nth-of-type(3) { animation-delay: 1.3s; }
 
     @keyframes fadeIn {
       to { opacity: 1; }
@@ -178,24 +137,22 @@
       padding: 30px 0;
       font-size: 0.9em;
       color: #888;
-      user-select: none;
     }
-
   </style>
 </head>
 <body>
 
   <header>
-    <div class="straw-hat" title="One Piece Straw Hat"></div>
+    <div class="straw-hat" title="Straw Hat"></div>
     <img src="https://i.imgur.com/PkpMKAl.jpeg" alt="Zayan Hamza" />
-    <h1><span class="slash-z">Z</span>ayan Hamza</h1>
-    <p>Cybersecurity Student | Photographer | One Piece Fan</p>
+    <h1>Zayan Hamza</h1>
+    <p>Cybersecurity Student | Photographer</p>
   </header>
 
   <section>
     <h2>About Me</h2>
     <p>
-      I'm a cybersecurity student at Macomb Community College with a love for ethical hacking and digital defense. I also enjoy capturing moments through photography and watching anime — especially One Piece! I'm working toward becoming a top cybersecurity consultant and creative tech professional.
+      I'm a cybersecurity student at Macomb Community College with a love for ethical hacking and digital defense. I also enjoy capturing moments through photography. I'm working toward becoming a top cybersecurity consultant and creative tech professional.
     </p>
   </section>
 
@@ -219,7 +176,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Zayan Hamza • Inspired by One Piece ⚓
+    &copy; 2023 Zayan Hamza
   </footer>
 
 </body>
