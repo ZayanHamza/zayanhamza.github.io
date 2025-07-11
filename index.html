@@ -2,100 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Zayan Hamza - Cybersecurity Student, Photographer & Tech Enthusiast" />
-  <title>Zayan Hamza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zayan Hamza - Cybersecurity Student, Photographer & One Piece Fan" />
+  <title>Zayan Hamza - One Piece Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
   <style>
+    /* Reset and base */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      color: #333;
+      background: #1b1b1b;
+      color: #fff;
+      overflow-x: hidden;
     }
+
     header {
-      background: #1e1e1e;
+      background: url('https://i.imgur.com/Ik9zUlc.jpeg') no-repeat center center/cover;
       color: white;
-      padding: 30px 20px;
       text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: visible;
     }
+
+    /* Waving animation on header text */
+    @keyframes wave {
+      0%, 60%, 100% { transform: rotate(0deg); }
+      30% { transform: rotate(15deg); }
+      45% { transform: rotate(-10deg); }
+    }
+
+    header h1 {
+      font-family: 'Pirata One', cursive;
+      font-size: 3.5em;
+      margin: 0;
+      display: inline-block;
+      animation: wave 2.5s infinite;
+      user-select: none;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
     header img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
-      margin-bottom: 15px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
     }
-    h1 {
-      font-size: 2.5em;
-      margin: 10px 0;
+
+    /* Animated Straw Hat icon bouncing */
+    .straw-hat {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: url('https://i.imgur.com/7PLqR4X.png') no-repeat center center/contain;
+      animation: bounce 3s ease-in-out infinite;
+      user-select: none;
+      z-index: 10;
+      cursor: default;
     }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
     section {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
     }
+
+    section:nth-of-type(1) {
+      animation-delay: 0.3s;
+    }
+    section:nth-of-type(2) {
+      animation-delay: 0.8s;
+    }
+    section:nth-of-type(3) {
+      animation-delay: 1.3s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
     h2 {
-      color: #444;
+      color: #f9d342;
+      font-family: 'Pirata One', cursive;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-size: 1.1em;
     }
+
     a {
-      color: #0077cc;
+      color: #3ec1d3;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       padding: 30px 0;
       font-size: 0.9em;
-      color: #666;
+      color: #888;
+      user-select: none;
     }
+
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://imgur.com/a/yLboqq7" alt="Zayan Hamza">
+    <div class="straw-hat" title="One Piece Straw Hat"></div>
+    <img src="https://i.imgur.com/PkpMKAl.jpeg" alt="Zayan Hamza" />
     <h1>Zayan Hamza</h1>
-    <p>Cybersecurity Student | Photographer | Tech Enthusiast</p>
+    <p>Cybersecurity Student | Photographer | One Piece Fan</p>
   </header>
 
   <section>
     <h2>About Me</h2>
     <p>
-      I’m a cybersecurity student at Macomb Community College with a passion for ethical hacking, digital security, and IT support. 
-      I'm currently working at Walmart in electronics, where I combine customer service skills with technical knowledge. 
-      I’m also a photographer and enjoy capturing moments through creative visuals.
-      I aim to become a cybersecurity consultant and a strong leader in the tech space.
+      I'm a cybersecurity student at Macomb Community College with a love for ethical hacking and digital defense. I also enjoy capturing moments through photography and watching anime — especially One Piece! I'm working toward becoming a top cybersecurity consultant and creative tech professional.
     </p>
+  </section>
 
+  <section>
     <h2>What I Do</h2>
     <ul>
-      <li>Cybersecurity – Network analysis, threat detection, ethical hacking</li>
-      <li>Customer-focused tech support</li>
-      <li>Photography – Portraits, events, and creative shots</li>
-      <li>Leadership and teamwork</li>
+      <li>🛡️ Cybersecurity – Ethical hacking, network analysis, threat defense</li>
+      <li>📸 Photography – Portraits, creative edits, and more</li>
+      <li>💬 Teamwork and leadership in tech spaces</li>
     </ul>
+  </section>
 
+  <section>
     <h2>Connect With Me</h2>
     <ul>
       <li><a href="mailto:zayanhamzaz@outlook.com">Email Me</a></li>
-      <li><a href="https://www.instagram.com/zice_03?igsh=M3Z3aWZlenJkaG1t&utm_source=qr" target="_blank">Instagram (@zice_03)</a></li>
-      <li><a href="https://www.snapchat.com/add/zahamzaaa?share_id=6wXqquduTz69PG-8BRVWqA&locale=en_US" target="_blank">Snapchat (@zahamzaaa)</a></li>
-      <li><a href="https://www.tiktok.com/@nobody_15030?_t=ZT-8xvJMhBRPg6&_r=1" target="_blank">TikTok (@nobody_15030)</a></li>
+      <li><a href="https://www.instagram.com/zice_03" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.snapchat.com/add/zahamzaaa" target="_blank" rel="noopener noreferrer">Snapchat</a></li>
+      <li><a href="https://www.tiktok.com/@nobody_15030" target="_blank" rel="noopener noreferrer">TikTok</a></li>
     </ul>
   </section>
 
   <footer>
-    &copy; 2025 Zayan Hamza
+    &copy; 2025 Zayan Hamza • Inspired by One Piece ⚓
   </footer>
 
 </body>
