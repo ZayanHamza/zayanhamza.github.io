@@ -12,88 +12,120 @@
       font-family: Arial, sans-serif;
       color: white;
       overflow-x: hidden;
+      text-align: center;
+      padding: 60px 20px;
     }
 
     header {
-      background: url('https://i.imgur.com/Ik9zUlc.jpeg') no-repeat center center/cover;
-      text-align: center;
-      padding: 80px 20px;
-      position: relative;
+      margin-bottom: 40px;
     }
 
     header img {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
-      margin-top: 10px;
+      display: block;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 2;
     }
 
-    .name-split {
+    .name-container {
       position: relative;
       display: inline-block;
       font-family: 'Pirata One', cursive;
       font-size: 3.5em;
-      margin-top: 20px;
-      perspective: 500px;
+      line-height: 1;
       user-select: none;
+      perspective: 600px;
+      width: max-content;
     }
 
-    .top-half, .bottom-half {
+    .half-name {
       position: absolute;
       left: 0;
       width: 100%;
       color: #f9d342;
       text-shadow: 2px 2px 8px #000;
-      transition: transform 0.7s ease;
-    }
-
-    .top-half {
-      top: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
       transform-origin: bottom left;
+      animation: sliceTop 3s ease forwards;
     }
-
-    .bottom-half {
-      top: 0;
+    .half-name.bottom {
+      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
       transform-origin: top right;
+      animation: sliceBottom 3s ease forwards;
+      color: #f9d342;
+      filter: drop-shadow(0 0 4px #f9d342);
     }
 
-    .name-split:hover .top-half {
-      transform: rotateX(-35deg) translate(-3px, -5px);
+    @keyframes sliceTop {
+      0% {
+        transform: translate(0, 0) rotateX(0deg);
+      }
+      50% {
+        transform: translate(-10px, -20px) rotateX(-30deg);
+      }
+      100% {
+        transform: translate(-15px, -30px) rotateX(-45deg);
+      }
     }
 
-    .name-split:hover .bottom-half {
-      transform: rotateX(35deg) translate(3px, 5px);
+    @keyframes sliceBottom {
+      0% {
+        transform: translate(0, 0) rotateX(0deg);
+      }
+      50% {
+        transform: translate(10px, 20px) rotateX(30deg);
+      }
+      100% {
+        transform: translate(15px, 30px) rotateX(45deg);
+      }
     }
 
     .slash-line {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 200%;
-      height: 3px;
+      width: 250%;
+      height: 4px;
       background: linear-gradient(to right, transparent, #f9d342, transparent);
-      transform: rotate(-45deg) translate(-50%, -50%);
-      box-shadow: 0 0 12px #f9d342;
-      z-index: 2;
-      animation: flash 2s infinite;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      box-shadow: 0 0 20px #f9d342;
+      animation: flash 3s ease forwards;
+      opacity: 0;
+      animation-delay: 0.8s;
     }
 
     @keyframes flash {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
+      0%, 40% {
+        opacity: 0;
+      }
+      50%, 70% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
-    header p {
+    p.subtitle {
       font-size: 1.2em;
-      margin-top: 80px;
+      margin-top: 140px;
+      color: #ddd;
+      font-weight: 600;
+      text-shadow: 1px 1px 4px #000;
     }
 
     section {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      text-align: left;
     }
 
     h2 {
@@ -132,14 +164,12 @@
 
   <header>
     <img src="https://i.imgur.com/PkpMKAl.jpeg" alt="Zayan Hamza" />
-
-    <div class="name-split">
-      <div class="top-half">Zayan Hamza</div>
-      <div class="bottom-half">Zayan Hamza</div>
+    <div class="name-container" aria-label="Zayan Hamza">
+      <div class="half-name top">Zayan Hamza</div>
+      <div class="half-name bottom">Zayan Hamza</div>
       <div class="slash-line"></div>
     </div>
-
-    <p>Cybersecurity Student | Photographer</p>
+    <p class="subtitle">Cybersecurity Student | Photographer</p>
   </header>
 
   <section>
@@ -162,14 +192,14 @@
     <h2>Connect With Me</h2>
     <ul>
       <li><a href="mailto:zayanhamzaz@outlook.com">Email Me</a></li>
-      <li><a href="https://www.instagram.com/zice_03" target="_blank">Instagram</a></li>
-      <li><a href="https://www.snapchat.com/add/zahamzaaa" target="_blank">Snapchat</a></li>
-      <li><a href="https://www.tiktok.com/@nobody_15030" target="_blank">TikTok</a></li>
+      <li><a href="https://www.instagram.com/zice_03" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.snapchat.com/add/zahamzaaa" target="_blank" rel="noopener noreferrer">Snapchat</a></li>
+      <li><a href="https://www.tiktok.com/@nobody_15030" target="_blank" rel="noopener noreferrer">TikTok</a></li>
     </ul>
   </section>
 
   <footer>
-    &copy; 2025 Zayan Hamza
+    &copy; 2023 Zayan Hamza
   </footer>
 
 </body>
